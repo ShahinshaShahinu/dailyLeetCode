@@ -5,12 +5,10 @@
  */
 var shuffle = function (nums, n) {
     let Shuffle = [];
-    let firstAr = [...nums.slice(0,n)], secondAr = [], shuf = 0;
+    let firstAr = [...nums.slice(0,n)], secondAr = [...nums.slice(n,nums.length)], shuf = 0;
 
     
-    for (let j = n; j < nums.length; j++) {
-        secondAr.push(nums[j])
-    }
+
     if (firstAr.length < secondAr.length) {
         shuf = secondAr.length
     } else {

@@ -19,5 +19,6 @@ var alternateDigitSum = function(n) {
     for(let j=0;j<ar.length;j++){
         sum+=ar[j]
     }
+    
     return sum
 };

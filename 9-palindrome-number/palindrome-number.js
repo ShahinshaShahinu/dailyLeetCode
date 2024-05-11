@@ -10,6 +10,8 @@ var isPalindrome = function(x) {
             return false
         }
     }
+
+    
     return true
 
 };

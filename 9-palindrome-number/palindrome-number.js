@@ -17,6 +17,7 @@ var isPalindrome = function(x) {
         x = x - (x % 1)
     }
 
+
     return reverse === xcopy;    
 
 };

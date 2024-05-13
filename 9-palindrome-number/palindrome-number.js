@@ -11,12 +11,12 @@ var isPalindrome = function(x) {
     let xcopy = x;
 
     while (x > 0) {
+        
         reverse = (reverse * 10) + (x % 10);
         // x = Math.floor(x / 10);
         x = x/10 ;
         x = x - (x % 1)
     }
-
     return reverse === xcopy;    
 
 };

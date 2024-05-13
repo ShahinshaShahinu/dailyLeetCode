@@ -14,7 +14,7 @@ var isPalindrome = function(x) {
         reverse = (reverse * 10) + (x % 10);
         // x = Math.floor(x / 10);
         x = x/10 ;
-        x = x-(x % 1)
+        x = x - (x % 1)
     }
 
     return reverse === xcopy;    

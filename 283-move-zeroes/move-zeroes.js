@@ -10,9 +10,12 @@ var moveZeroes = function(nums) {
           count++;
         }
       }
+      
       while (count < nums.length) {
         nums[count]=0;
         count++;
       }
+
       return nums;
+
 };

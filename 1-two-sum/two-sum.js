@@ -11,7 +11,7 @@ var twoSum = function(nums, target) {
         if (target - num in pairIdx) {
             return [i, pairIdx[target - num]];
         }
-        pairIdx[num] = i;
+        pairIdx[num] = i; 
     }    
-    
+
 };

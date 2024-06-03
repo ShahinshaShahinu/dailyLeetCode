@@ -4,8 +4,7 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-      const pairIdx = {};
-
+    const pairIdx = {};
     for (let i = 0; i < nums.length; i++) {
         const num = nums[i];
         if (target - num in pairIdx) {
@@ -13,5 +12,4 @@ var twoSum = function(nums, target) {
         }
         pairIdx[num] = i; 
     }    
-
 };

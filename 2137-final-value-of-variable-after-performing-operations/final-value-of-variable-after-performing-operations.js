@@ -9,7 +9,6 @@ var finalValueAfterOperations = function(operations) {
             x-- ;
         } 
         else {
-            
             x++ ;
         }
     }

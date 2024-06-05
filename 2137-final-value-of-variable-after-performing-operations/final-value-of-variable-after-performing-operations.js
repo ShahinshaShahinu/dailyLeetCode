@@ -9,7 +9,7 @@ var finalValueAfterOperations = function(operations) {
             x-- ;
         }
         if(operations[i] == 'X++' || operations[i] == '++X'){
-            x += 1 ;
+            x++ ;
         }
     }
     return x ;

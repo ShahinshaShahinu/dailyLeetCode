@@ -13,7 +13,6 @@ var finalValueAfterOperations = function(operations) {
             x = x+1 ;
         }
     }
-
     return x
 
 };

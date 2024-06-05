@@ -11,11 +11,5 @@ var twoSum = function(nums, target) {
             return [i, pairIdx[target - num]];
         }
         pairIdx[num] = i; 
-    }   
-
-
-
-
-    
-
+    }       
 };

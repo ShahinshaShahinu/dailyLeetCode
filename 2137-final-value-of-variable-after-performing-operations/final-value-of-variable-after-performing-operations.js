@@ -13,5 +13,5 @@ var finalValueAfterOperations = function(operations) {
             x += 1 ;
         }
     }
-    return x
+    return x ;
 };

@@ -8,7 +8,7 @@ var finalValueAfterOperations = function(operations) {
         if(operations[i] == 'X--' || operations[i] == '--X' ){
             x-- ;
         } 
-        else if(operations[i] == 'X++' || operations[i] == '++X'){
+        else {
             x++ ;
         }
     }

@@ -12,5 +12,4 @@ var finalValueAfterOperations = function(operations) {
         }
     }
     return x ;
-    
 };

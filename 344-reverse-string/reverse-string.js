@@ -3,11 +3,13 @@
  * @return {void} Do not return anything, modify s in-place instead.
  */
 var reverseString = function (s, L = 0, R = s.length - 1) {
-    if (L >= R) return;
-
+  
+  while(L<=R){
     let Temp = s[L];
     s[L] = s[R];
     s[R] = Temp;
+    L++;R--
+  }
 
-    reverseString(s , L+1 , R-1);
+    
 };

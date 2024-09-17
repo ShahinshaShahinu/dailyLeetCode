@@ -25,5 +25,5 @@ var reverseString = function (s) {
     //     start++;
     //     end--;
     // }
-    s.reverse()
+   return s.reverse()
 };

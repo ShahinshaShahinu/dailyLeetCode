@@ -4,13 +4,19 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-    const pairIdx = {};
-    if(nums.length <2) return 0 
-    for (let i = 0; i < nums.length; i++) {
-        const num = nums[i];
-        if (target - num in pairIdx) {
-            return [i, pairIdx[target - num]];
+   const sortedNums = nums.map((num, idx) => ({ num, idx })).sort((a, b) => a.num - b.num);
+    let left = 0;
+    let right = sortedNums.length - 1;
+
+    while (left < right) {
+        const sum = sortedNums[left].num + sortedNums[right].num;
+        if (sum === target) {
+            return [sortedNums[left].idx, sortedNums[right].idx];
+        } else if (sum < target) {
+            left++;
+        } else {
+            right--;
         }
-        pairIdx[num] = i; 
     }
+    return null; // If no solution found
 };

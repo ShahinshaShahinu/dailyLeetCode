@@ -3,25 +3,31 @@
  * @return {number}
  */
 var countPrimes = function (n) {
-    if (n <= 2) return 0;
+    if (n <= 2) return 0; // No primes less than 2
 
-    // Create a boolean array to mark prime numbers
-    let isPrime = new Array(n).fill(true);
-    isPrime[0] = isPrime[1] = false; // 0 and 1 are not prime numbers
+    let count = 0;
 
-    for (let i = 2; i * i < n; i++) {
-        if (isPrime[i]) {
-            // Mark all multiples of i as non-prime
-            for (let j = i * i; j < n; j += i) {
-                isPrime[j] = false;
+    for (let i = 2; i < n; i++) {
+        let isPrime = true;
+
+        if (i === 2) {
+            count++; // 2 is prime
+            continue;
+        }
+
+        if (i % 2 === 0) {
+            isPrime = false; // Skip even numbers greater than 2
+        } else {
+            // Check divisibility from 3 to the square root of i
+            for (let j = 3; j * j <= i; j += 2) {
+                if (i % j === 0) {
+                    isPrime = false; // Found a divisor
+                    break;
+                }
             }
         }
-    }
 
-    // Count the number of prime numbers
-    let count = 0;
-    for (let i = 2; i < n; i++) {
-        if (isPrime[i]) count++;
+        if (isPrime) count++; // Count the prime number
     }
 
     return count;

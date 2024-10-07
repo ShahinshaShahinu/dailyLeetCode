@@ -9,8 +9,8 @@ var majorityElement = function(nums) {
     for(let i=0;i<nums.length;i++){
         if(count === 0){
             element = nums[i];
-        }
-         if(element === nums[i]){
+            count = 1 ;
+        }else if(element === nums[i]){
             count++
         }else{
             count--

@@ -9,7 +9,7 @@ var rotate = function (nums, k) {
     k = k % n;        
              // Step 2: Normalize k in case it's greater than n
 
-    const rotated = new Array(n);     // Step 3: Create a new array to hold the rotated values
+    const rotated = []    // Step 3: Create a new array to hold the rotated values
 
     // Step 4: Fill the rotated array with the appropriate values
     for (let i = 0; i < n; i++) {

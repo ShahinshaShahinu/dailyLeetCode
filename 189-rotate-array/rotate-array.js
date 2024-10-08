@@ -4,8 +4,10 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var rotate = function (nums, k) {
-    const n = nums.length;            // Step 1: Get the length of the array
-    k = k % n;                        // Step 2: Normalize k in case it's greater than n
+        const n = nums.length;  
+      // Step 1: Get the length of the array
+    k = k % n;        
+             // Step 2: Normalize k in case it's greater than n
 
     const rotated = new Array(n);     // Step 3: Create a new array to hold the rotated values
 
@@ -18,4 +20,5 @@ var rotate = function (nums, k) {
     for (let i = 0; i < n; i++) {
         nums[i] = rotated[i];          // Update the original array
     }
+    return nums
 };

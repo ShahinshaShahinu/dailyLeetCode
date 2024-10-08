@@ -3,7 +3,7 @@
  * @param {number} k
  * @return {void} Do not return anything, modify nums in-place instead.
  */
-var rotate = function(nums, k) {
+var rotate = function (nums, k) {
     const n = nums.length;            // Step 1: Get the length of the array
     k = k % n;                        // Step 2: Normalize k in case it's greater than n
 

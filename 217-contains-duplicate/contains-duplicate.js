@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 var containsDuplicate = function (nums) {
-    let UniqueSet = new Set();
+    var UniqueSet = new Set();
     for (let i = 0; i < nums.length; i++) {
         if (UniqueSet.has(nums[i])) {
             return true;
@@ -12,6 +12,4 @@ var containsDuplicate = function (nums) {
         }
     }
     return false;
-
-  
 };

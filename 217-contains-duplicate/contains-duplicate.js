@@ -3,13 +3,19 @@
  * @return {boolean}
  */
 var containsDuplicate = function (nums) {
-    let UniqueSet = new Set();
+   // Create a set to store unique elements
+    let numSet = new Set();
+    
+    // Iterate through the array
     for (let i = 0; i < nums.length; i++) {
-        if (UniqueSet.has(nums[i])) {
+        // If the set already contains the element, return true
+        if (numSet.has(nums[i])) {
             return true;
-        } else {
-            UniqueSet.add(nums[i]);
         }
+        // Add the element to the set
+        numSet.add(nums[i]);
     }
-    return false
+    
+    // If no duplicates are found, return false
+    return false;
 };

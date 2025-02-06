@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 var containsDuplicate = function (nums) {
-    const UniqueSet = new Set();
+    let UniqueSet = new Set();
     for (let i = 0; i < nums.length; i++) {
         if (UniqueSet.has(nums[i])) {
             return true;

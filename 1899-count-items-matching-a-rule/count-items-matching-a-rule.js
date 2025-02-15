@@ -6,11 +6,11 @@
  */
 var countMatches = function (items, ruleKey, ruleValue) {
     // let ItemCount = 0;
-    // let ruleIndex = {
-    //     type: 0,
-    //     color: 1,
-    //     name: 2
-    // }
+    let ruleIndex = {
+        type: 0,
+        color: 1,
+        name: 2
+    }
     // first mehtod
     // let ruleIndex = ruleKey === 'type' ? 0 : ruleKey === 'color' ? 1 : 2;
     // for (let item of items) {
@@ -30,7 +30,7 @@ var countMatches = function (items, ruleKey, ruleValue) {
     // instead of for loop 
     // return items.filter((item) => item[ruleIndex[ruleKey] === ruleValue]).length;
 
-    let indexMap = { "type": 0, "color": 1, "name": 2 }
-    let index = indexMap[ruleKey];
+    // let indexMap = { "type": 0, "color": 1, "name": 2 }
+    let index = ruleIndex[ruleKey];
     return items.filter((item) => item[index] === ruleValue).length;
 };

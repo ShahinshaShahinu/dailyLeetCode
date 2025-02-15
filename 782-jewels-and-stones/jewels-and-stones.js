@@ -12,9 +12,9 @@ var numJewelsInStones = function (jewels, stones) {
     };
 
     for (let stone of stones) {
-        if (jwelsType.get(stone)) {
+        if (jwelsType.has(stone)) {
             RealjwelsCount++;
         }
     };
-return RealjwelsCount;
+    return RealjwelsCount;
 };

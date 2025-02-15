@@ -6,12 +6,14 @@
  */
 var countMatches = function (items, ruleKey, ruleValue) {
     let ItemCount = 0;
+    // first mehtod
     // let ruleIndex = ruleKey === 'type' ? 0 : ruleKey === 'color' ? 1 : 2;
     // for (let item of items) {
     //     if (item[ruleIndex] === ruleValue) {
     //         ItemCount++;
     //     }
     // }
+    // second method
     let ruleIndex = {
         type: 0,
         color: 1,

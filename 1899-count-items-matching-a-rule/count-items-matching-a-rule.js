@@ -32,5 +32,6 @@ var countMatches = function (items, ruleKey, ruleValue) {
 
     // let indexMap = { "type": 0, "color": 1, "name": 2 }
     let index = ruleIndex[ruleKey];
-    return items.filter((item) => item[index] === ruleValue).length;
+    return items.filter((item) => item[ruleIndex[ruleKey]] === ruleValue).length;
+
 };

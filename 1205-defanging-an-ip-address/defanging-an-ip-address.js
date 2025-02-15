@@ -2,16 +2,14 @@
  * @param {string} address
  * @return {string}
  */
-    var defangIPaddr = function(address) {
-        let defanging = '' ;
-        for(let i=0;i<address.length;i++){
-            if(address[i]=='.'){
-                defanging+='[.]'
-            }else{
-            defanging+=address[i]
-
-            }
+var defangIPaddr = function (address) {
+    let newIP = ""
+    for (let i = 0; i < address.length; i++) {
+        if (address[i] == ".") {
+            newIP += `[${address[i]}]`
+        } else {
+            newIP += address[i]
         }
-
-        return defanging
-    };
+    }
+    return newIP;
+};

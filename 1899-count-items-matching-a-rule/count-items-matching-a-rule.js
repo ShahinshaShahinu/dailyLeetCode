@@ -26,12 +26,9 @@ var countMatches = function (items, ruleKey, ruleValue) {
     //     }
     // }
     // return ItemCount;
+    
     // third method
     // instead of for loop 
-    // return items.filter((item) => item[ruleIndex[ruleKey] === ruleValue]).length;
-
-    // let indexMap = { "type": 0, "color": 1, "name": 2 }
-    // let index = ruleIndex[ruleKey];
     return items.filter((item) => item[ruleIndex[ruleKey]] === ruleValue).length;
 
 };

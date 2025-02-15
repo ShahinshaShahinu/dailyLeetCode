@@ -8,7 +8,9 @@ var numJewelsInStones = function (jewels, stones) {
     const jwelsType = new Map();
 
     for (let char of jewels) {
-        jwelsType.set(char, true);
+        if (!jwelsType.has(char)) {
+            jwelsType.set(char, true);
+        }
     };
 
     for (let stone of stones) {

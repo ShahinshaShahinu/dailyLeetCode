@@ -3,18 +3,14 @@
  * @return {string}
  */
 var firstPalindrome = function (words) {
-    for (let index = 0; index < words.length; index++) {
-        let isPalindrome = true;
-        let word = words[index];
+    const isPalindrome = (word) => {
         for (let i = 0; i < word.length / 2; i++) {
             if (word[i] !== word[word.length - 1 - i]) {
-                isPalindrome = false;
-                break;
+                return false;
             }
         };
-        if (isPalindrome) {
-            return word
-        }
+        return true;
     }
-    return '';
+    for (const word of words) if (isPalindrome(word)) return word;
+    return ""
 };

@@ -9,6 +9,6 @@ var firstPalindrome = function (words) {
         };
         return true;
     }
-    for (const word of words) if (isPalindrome(word)) return word;
+    for (let word of words) if (isPalindrome(word)) return word;
     return ""
 };

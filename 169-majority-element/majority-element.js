@@ -2,19 +2,19 @@
  * @param {number[]} nums
  * @return {number}
  */
-var majorityElement = function(nums) {
+var majorityElement = function (nums) {
     let element = null;
-    let count = 0 ;
+    let count = 0;
 
-    for(let i=0;i<nums.length;i++){
-        if(count === 0){
+    for (let i = 0; i < nums.length; i++) {
+        if (count === 0) {
             element = nums[i];
-            count = 1 ;
-        }else if(element === nums[i]){
+            count = 1;
+        } else if (element === nums[i]) {
             count++
-        }else{
+        } else {
             count--
         }
     }
-    return element ;
+    return element;
 };

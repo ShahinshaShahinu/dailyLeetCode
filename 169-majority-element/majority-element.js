@@ -15,6 +15,7 @@ var majorityElement = function (nums) {
         } else {
             count--
         }
+        
     }
     return element;
 };

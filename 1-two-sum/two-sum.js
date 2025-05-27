@@ -5,13 +5,14 @@
  */
 var twoSum = function (nums, target) {
 
+    const values = new Map();
     for (let i = 0; i < nums.length; i++) {
-        for (let j = i + 1; j < nums.length; j++) {
-            if (nums[i] + nums[j] === target) {
-                return [i, j];  // Return the indices of the two numbers
-         };
-        };
-    };
+        const diff = target - nums[i];
 
-    return -1
+        if (values.has(diff)) {
+            return [values.get(diff), i]
+        }
+        values.set(nums[i], i)
+    }
+    return null;
 };

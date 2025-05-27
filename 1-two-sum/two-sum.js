@@ -13,5 +13,5 @@ var twoSum = function (nums, target) {
         };
     };
 
-    return [-1, -1];  // Return [-1, -1] if no solution is found
+    return -1
 };

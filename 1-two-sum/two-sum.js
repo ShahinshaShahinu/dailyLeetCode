@@ -4,15 +4,16 @@
  * @return {number[]}
  */
 var twoSum = function (nums, target) {
-
-    const values = new Map();
+    const map = new Map();
     for (let i = 0; i < nums.length; i++) {
-        const diff = target - nums[i];
-
-        if (values.has(diff)) {
-            return [values.get(diff), i]
-        }
-        values.set(nums[i], i)
+        map.set(nums[i], i);
     }
-    return null;
+    for (let i = 0; i < nums.length; i++) {
+        const complement = target - nums[i];
+        if (map.has(complement) && map.get(complement) !== i) {
+            return [i, map.get(complement)];
+        }
+    }
+    // If no valid pair is found, return an empty array
+    return [];
 };

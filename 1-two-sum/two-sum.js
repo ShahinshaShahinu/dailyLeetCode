@@ -11,7 +11,7 @@ var twoSum = function (nums, target) {
         if(diff in prev){
             return [prev[diff],i];
         }
-        prev[nums[i]] = i ;  // this is a key assign a value ..
+        prev[nums[i]] = i ;  // this is a key assign a value .. done
     }
     return 0;
 };

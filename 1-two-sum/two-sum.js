@@ -4,14 +4,12 @@
  * @return {number[]}
  */
 var twoSum = function (nums, target) {
-   let prev = {};
-    
-    for(let i=0;i<nums.length;i++){
-        let diff = target - nums[i];
-        if(diff in prev){
-            return [prev[diff],i];
+ for(let i=0;i<nums.length;i++){
+    for(let j=i+1;j<nums.length;j++){
+        if(nums[i]+nums[j]==target){
+            return [i,j];
         }
-        prev[nums[i]] = i ;  // this is a key assign a value .. done
     }
-    return 0;
+ }
+ return 0
 };

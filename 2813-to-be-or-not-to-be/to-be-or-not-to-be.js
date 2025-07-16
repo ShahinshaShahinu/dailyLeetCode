@@ -8,32 +8,20 @@ var expect = function (val) {
             if (val === value) {
                 return true;
             } else {
-                throw new Error("Not Equal")
+                throw new Error("Not Equal");
             }
         },
         notToBe: function (value) {
             if (val !== value) {
                 return true;
             } else {
-                throw new Error("Equal")
+                throw new Error("Equal");
             }
         }
 
     };
 };
 
-try {
-    const result = expect(5).toBe(5);
-    console.log({ "value": result })
-} catch (error) {
-    console.log({ error: error.message })
-}
-try {
-    const result = expect(5).notToBe(5)
-    console.log({ "value": result })
-} catch (error) {
-    console.log({ error: error.message })
-}
 
 
 /**

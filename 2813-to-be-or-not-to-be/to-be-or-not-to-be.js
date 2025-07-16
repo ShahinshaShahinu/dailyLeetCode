@@ -22,6 +22,18 @@ var expect = function (val) {
     };
 };
 
+try {
+    const result = expect(5).toBe(5);
+    console.log({ "value": result })
+} catch (error) {
+    console.log({ error: error.message })
+}
+try {
+    const result = expect(5).notToBe(5)
+    console.log({ "value": result })
+} catch (error) {
+    console.log({ error: error.message })
+}
 
 
 /**

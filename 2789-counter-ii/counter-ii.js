@@ -7,13 +7,13 @@ var createCounter = function (init) {
 
     return {
         increment: function () {
-            return counter += 1;
+            return init += 1;
         },
         decrement: function () {
-            return counter -= 1;
+            return init -= 1;
         },
         reset: function () {
-            return counter = init;
+            return init = counter;
         }
     }
 };

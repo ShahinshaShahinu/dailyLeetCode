@@ -2,14 +2,17 @@
  * @param {Function[]} functions
  * @return {Function}
  */
-var compose = function(functions) {
-    
-    return function(x) {
-          // Iterate over each function in reverse order and apply it to the input
-        for (let i = functions.length - 1; i >= 0; i--) {
-            x = functions[i](x);
-        }
-        return x; // Return the result after applying all functions
+var compose = function (functions) {
+    if (functions.length === 0) {
+        return function (x) { return x }
+    }
+    return function (x) {
+        let result = functions[functions.length - 1]?.(x);
+
+        for (let i = functions.length - 2; i >= 0; i--) {
+            result = functions[i](result);
+        };
+        return result;
     }
 };
 

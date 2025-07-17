@@ -5,7 +5,8 @@
 var compose = function (functions) {
     if (functions.length === 0) {
         return function (x) { return x }
-    }
+    };
+    
     return function (x) {
         let result = functions[functions.length - 1]?.(x);
 

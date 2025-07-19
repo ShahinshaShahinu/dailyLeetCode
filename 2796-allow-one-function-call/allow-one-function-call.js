@@ -12,7 +12,7 @@ var once = function(fn) {
         }else{
             return undefined ;
         }
-    }
+    };
 };
 
 /**

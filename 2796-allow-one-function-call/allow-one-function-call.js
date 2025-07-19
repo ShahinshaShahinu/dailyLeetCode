@@ -11,7 +11,7 @@ var once = function(fn) {
           return fn(...args); 
         }else{
             return undefined ;
-        }
+        };
     };
 };
 

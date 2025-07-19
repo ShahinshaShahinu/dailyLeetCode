@@ -3,19 +3,14 @@
  * @return {number}
  */
 var repeatedNTimes = function (nums) {
-   const length = nums.length
+    const seen = new Set();
 
-    for(let i=0; i<length - 3; i++) {
-        const set = new Set()
-        for(let j=i; j<=i+3; j++){
-            if(set.has(nums[j])){
-                return nums[j]
-            } else{
-                set.add(nums[j])
-            }
+    for (let num of nums) {
+        if (seen.has(num)) {
+            return num;
         }
-
+        seen.add(num);
     }
 
-    return false
+    return -1;
 };

@@ -13,7 +13,7 @@
 var removeElements = function (head, val) {
     if (!head) {
         return head;
-    }
+    };
 
     while (head) {
         if (head.val === val) {
@@ -21,7 +21,7 @@ var removeElements = function (head, val) {
         } else {
             break;
         }
-    }
+    };
 
     let current = head?.next;
     let previous = head;
@@ -34,7 +34,7 @@ var removeElements = function (head, val) {
             previous = current;
             current = current.next;
         }
-    }
+    };
 
     return head;
 };

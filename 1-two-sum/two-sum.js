@@ -17,10 +17,11 @@ var twoSum = function (nums, target) {
     const prev_map = new Map();
 
     for (let i = 0; i < nums.length; i++) {
-        if (prev_map.has(target - nums[i])) {
-            return [prev_map.get(target - nums[i]), i]
+        let current = nums[i];
+        if (prev_map.has(target - current)) {
+            return [prev_map.get(target - current), i]
         }
-        prev_map.set(nums[i], i);
+        prev_map.set(current, i);
     }
 
 

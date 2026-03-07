@@ -4,14 +4,12 @@
  * @return {number[]}
  */
 var twoSum = function (nums, target) {
-    let prev_obj = {}
-
     for (let i = 0; i < nums.length; i++) {
-        const diff = target - nums[i]
-
-        if (diff in prev_obj) {
-            return [prev_obj[diff], i]
+        for (let j = i + 1; j < nums.length; j++) {
+            if (nums[i] + nums[j] == target) {
+                return [i, j]
+            }
         }
-        prev_obj[nums[i]] = i;
     }
+    return 0;
 };

@@ -14,7 +14,18 @@ var twoSum = function (nums, target) {
     //     prevMap.set(nums[i], i)
     // }
 
-    // return []
+    // return [];
+
+
+    let seenMap = new Map();
+
+    for (let i = 0; i < nums.length; i++) {
+        if (seenMap.has(target - nums[i])) {
+            return [seenMap.get(target - nums[i]), i]
+        }
+        seenMap.set(nums[i], i);
+    }
+    return []
 
     // for (let i = 0; i < nums.length; i++) {
     //     for (let j = i + 1; j < nums.length; j++) {
@@ -23,14 +34,6 @@ var twoSum = function (nums, target) {
     //         }
     //     }
     // }
-    // return 0;
+    // return [];
 
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = i + 1; j < nums.length; j++) {
-            if (nums[i] + nums[j] === target) {
-                return [i, j]
-            }
-        }
-    }
-    return 0
 };
